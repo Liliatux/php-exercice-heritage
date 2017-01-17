@@ -10,24 +10,39 @@ class Car {
 
 	public function __construct() {
 		$this->manufacturer = 'unknown';
+		$this->kilometrage = 0;
+		$this->airbag = false;
 		$this->doors = 2;
 	}
 
+	//Retourne un nombre sur le nombre de roues
 	public function getWheels() {
 		return $this->wheels;
+	}
+
+	public function setWheels($value) {
+		$this->wheels = $value;
 	}
 
 	/**
 	 * Retrourne une chaîne de caractère
 	 * 
 	 */
-
 	public function getManufacturer() {
 		return $this->manufacturer;
 	}
 
 	public function setManufacturer($name) {
 		$this->manufacturer = $name;
+	}
+
+	// Retourne un nombre sur le kilometrage
+	public function getKilometrage() {
+		return $this->kilometrage;
+	}
+
+	public function setKilometrage($kilo) {
+		$this->kilometrage = $kilo;
 	}
 
 	/**
@@ -50,4 +65,24 @@ class Car {
 		$this->airbag = $available;
 	}
 
+
+	//Retourne un booleen sur la disponibilité de l'abs
+	public function getAbs() {
+		return $this->abs;
+	}
+
+	public function setAbs($dispo) {
+		$this->abs = $dispo;
+	}
+
+	//Retourne le nombre de porte
+	public function getDoors() {
+		return $this->doors;
+	}
+
+	public function setDoors($door) {
+		$this->doors = $door;
+	}
 }
+
+$car = new Car;
